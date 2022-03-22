@@ -1,20 +1,25 @@
 import { actionTypes } from "../constants/actionTypes";
 
 const intialState = {
-  products: [{
-      id : 1,
-      title : "Deep",
-      catogery : "Programmer",
-  }],
+  products: [],
 };
 
-export const productReducer = (state=intialState, { type, payload }) => {
+export const productReducer = (state = intialState, { type, payload }) => {
   switch (type) {
     case actionTypes.SET_PRODUCTS:
-      return state;
-
+      return {...state, products:payload}; 
+    
     default:
-      break;
+      return state;
   }
-  return <></>;
 };
+
+export const selectedProductReducer = (state = {}, {type,payload}) =>{
+  switch (type) {
+    case actionTypes.SELECTED_PRODUCT:  
+     return {...state, ...payload}
+      
+    default:
+      return state;
+  }
+}

@@ -1,0 +1,17 @@
+.carddisplay{
+    display: inline-block;
+    height: 500px;
+}
+.ui.cards > .card > .image:not(.ui) > img{
+    width: 250px;
+    height: 250px;
+}
+.content{
+    height: 120px;
+}
+.ui.link.cards .card{
+    padding: 10px;
+}
+.ui.cards{
+    padding: 20px;
+}
